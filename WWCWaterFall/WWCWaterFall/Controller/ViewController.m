@@ -39,7 +39,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     WWCWaterFallLayout *waterFall = [WWCWaterFallLayout initWaterFallLayoutWithColumnCount:3];
-    [waterFall setColumnSpace:10 rowSpace:10 sectionInset:UIEdgeInsetsMake(10, 10, 10, 10)];
+    waterFall.rowSpace = 10;
+    waterFall.columnSpace = 10;
+    waterFall.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     waterFall.delegate = self;
     _collectionView= [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-20) collectionViewLayout:waterFall];
     _collectionView.backgroundColor = [UIColor whiteColor];

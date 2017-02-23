@@ -37,12 +37,6 @@
     return [[self alloc] initWithColumnCount:columnCount];
 }
 
-- (void)setColumnSpace:(CGFloat)columnSpace rowSpace:(CGFloat)rowSepace sectionInset:(UIEdgeInsets)sectionInset{
-    self.columnSpace = columnSpace;
-    self.rowSpace = rowSepace;
-    self.sectionInset = sectionInset;
-}
-
 - (void)prepareLayout{
     [super prepareLayout];
     //每一个item的最大y值初始化为上边距

@@ -15,7 +15,7 @@
 /*
  计算item的高度
  @pram waterFallLayout: WWCWaterFallLayout
- @pram itemWidth: item的高度
+ @pram itemWidth: item的宽度
  @pram indexPath: item的所在位置的indexPath
  */
 - (CGFloat)waterFallLayout:(WWCWaterFallLayout *)waterFallLayout itemHeightForWidth:(CGFloat)itemWidth atIndexPath:(NSIndexPath *)indexPath;
@@ -31,14 +31,7 @@
 
 @property (nonatomic, weak) id<WWCWaterFallLayoutDelegate>delegate;//代理
 
-/*
- 计算item的高度
- @pram columnSpace: 列间距
- @pram rowSpace: 行间距
- @pram sectionInset: section与collectionView的间距
- */
-- (void)setColumnSpace:(CGFloat)columnSpace rowSpace:(CGFloat)rowSepace sectionInset:(UIEdgeInsets)sectionInset;
-
+//初始化
 + (instancetype)initWaterFallLayoutWithColumnCount:(NSInteger)columnCount;
 - (instancetype)initWithColumnCount:(NSInteger)columnCount;
 
